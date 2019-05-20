@@ -1,0 +1,27 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "A dating app",
+  "main": "apiRoutes.js",
+  "scripts": {
+    "test": "node apiRoutes.js",
+    "start": "node apiRoutes.js",
+    "html": "node htmlRoutes.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacobBraxley/friendfinder"
+  },
+  "keywords": [
+    "friendfinder"
+  ],
+  "author": "Jacob Braxley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacobBraxley/friendfinder/issues"
+  },
+  "homepage": "https://github.com/JacobBraxley/friendfinder#readme",
+  "dependencies": {
+
+  }
+}
