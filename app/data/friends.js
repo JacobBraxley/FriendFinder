@@ -85,6 +85,7 @@ function findClosestMatch(friendSeeker) {
         }
         if(totalDiff < bestMatchDiff) {
             bestMatch = element;
+            bestMatchDiff = totalDiff;
         }
     });
 
