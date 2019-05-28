@@ -1,28 +1,30 @@
 const path = require("path");
 
-const friendsData = require("../data/friends");
+const friends = require("../data/friends");
 
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
-        res.json(friendsData);
+        res.json(friends.data);
     });
 
     app.post("/api/friends", function(req, res) {
-
         //Validate body first...
         let dataIsValid = (req.body.name != "" && req.body.photo != "" && req.body.scores); //Contains all the requirements.
 
-        scores.forEach(element => {
+        req.body.scores.forEach(element => {
             if(isNaN(element)) {
                 dataIsValid = false;
             }
         });
 
         if(dataIsValid) {
-            friendsData.push(req.body);
+            friends.find(req.body);
+            friends.add(req.body);
             //Figure out appropriate response.
+            res.send(friends.recommendation());
         } else {
             //Indicate that data was invalid.
+            console.log("Data was invalid.")
         }
     });
 };

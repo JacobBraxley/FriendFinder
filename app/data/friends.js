@@ -73,14 +73,15 @@ const friendsData = [
     }
 ];
 
-function findClosestMatch(incomeScores) {
+function findClosestMatch(friendSeeker) {
     let bestMatch = null;
     let bestMatchDiff = 10000;
 
     friendsData.forEach(element => {
+        if(element.name == friendSeeker.name) { return; } //Don't return yourself!.
         let totalDiff = 0;
-        for(let i = 0; i < incomeScores.length; i++) {
-            totalDiff += Math.abs(element.scores[i] - incomeScores[i]);
+        for(let i = 0; i < friendSeeker.scores.length; i++) {
+            totalDiff += Math.abs(element.scores[i] - friendSeeker.scores[i]);
         }
         if(totalDiff < bestMatchDiff) {
             bestMatch = element;
@@ -90,4 +91,16 @@ function findClosestMatch(incomeScores) {
     recommendedFriend = bestMatch;
 }
 
-module.exports = friendsData;
+function addFriendSeeker(friendSeeker) {
+
+    if(friendsData.includes(friendSeeker)) { return; }
+
+    friendsData.push(friendSeeker);
+}
+
+module.exports =  {
+    data: friendsData,
+    add: addFriendSeeker,
+    find: findClosestMatch,
+    recommendation: function() { return recommendedFriend; }
+}

@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/JacobBraxley/friendfinder#readme",
   "dependencies": {
-
+    "express": "^4.17.1"
   }
 }
