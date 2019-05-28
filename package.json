@@ -1,11 +1,11 @@
 {
   "name": "friendfinder",
   "version": "1.0.0",
-  "description": "A dating app",
-  "main": "apiRoutes.js",
+  "description": "A social app",
+  "main": "server.js",
   "scripts": {
-    "test": "node apiRoutes.js",
-    "start": "node apiRoutes.js",
+    "test": "node server.js",
+    "start": "node server.js",
     "html": "node htmlRoutes.js"
   },
   "repository": {
