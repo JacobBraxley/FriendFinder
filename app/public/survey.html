@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        label {
+            color: black !important;
+        }
+    </style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -12,168 +17,210 @@
 </head>
 
 <body>
+    <div class="container indigo lighten-4 s12 m8" style="padding-bottom: 1px">
+        <div class="section">
+            <h3 style="margin-left: 10px">Survey Questions</h3>
+        </div>
+        <div class="divider"></div>
+        <div class="section bold" style="margin-left: 10px">
+            <h5>About You</h5>
+        </div>
+        <div class="row">
+            <form id="newProfileSurvey" class="col s12">
+                <div class="input-field col s12">
+                    <input name="name" id="profileName" type="text" class="validate">
+                    <label for="profileName">Name (Required)</label>
+                </div>
+                <div class="input-field col s12">
+                    <input name="photo" id="photoURL" type="text" class="validate">
+                    <label for="photoURL">Link to Photo Image (Required)</label>
+                </div>
+                <div class="input-field col s12">
+                    <select data-num='1'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Cookie (1) to Cake (10)</label>
+                </div>
+                <div class="input-field col s12">
+                    <select data-num='2'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Nature (1) to Space (10)</label>
+                </div>
 
-    <div class="container indigo lighten-4 s12 m8">
-        <form id="newProfileSurvey">
-            <textarea name="name" id="profileName"></textarea>
-            <textarea name="photo" id="photoURL"></textarea>
 
-            <div class="input-field col s12">
-                <select data-num='1'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Cookie (1) to Cake (10)</label>
-            </div>
-            <div class="input-field col s12">
-                <select data-num='2'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Nature (1) to Space (10)</label>
-            </div>
+                <div class="input-field col s12"><select data-num='3'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Waves (1) to Clouds (10)</label> </div>
+                <div class="input-field col s12"><select data-num='4'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Sweet (1) to Spicy (10)</label> </div>
+                <div class="input-field col s12"><select data-num='5'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Violet (1) to Red (10)</label> </div>
+                <div class="input-field col s12"><select data-num='6'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Swimming (1) to Art (10)</label> </div>
+                <div class="input-field col s12"><select data-num='7'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Music (1) to Storytelling (10)</label> </div>
+                <div class="input-field col s12"><select data-num='8'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Skipping (1) to Swaying (10)</label> </div>
+                <div class="input-field col s12">
+                    <select data-num='9'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label>Running (1) to Dancing (10)</label>
+                </div>
+                <div class="input-field col s12"><select data-num='10'>
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select><label>Aaaayyy!!! (1) to Geronimo!!!(10)</label> </div>
 
+                <div class="col s12">
+                    <button class="waves-effect waves-light btn blue" style="width:100%" type="submit">Find a
+                        Friend!</button>
+                </div>
 
-            <div class="input-field col s12"><select data-num='3'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Waves (1) to Clouds (10)</label> </div>
-            <div class="input-field col s12"><select data-num='4'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Sweet (1) to Spicy (10)</label> </div>
-            <div class="input-field col s12"><select data-num='5'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Violet (1) to Red (10)</label> </div>
-            <div class="input-field col s12"><select data-num='6'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Swimming (1) to Art (10)</label> </div>
-            <div class="input-field col s12"><select data-num='7'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Music (1) to Storytelling (10)</label> </div>
-            <div class="input-field col s12"><select data-num='8'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Skipping (1) to Swaying (10)</label> </div>
-            <div class="input-field col s12">
-                <select data-num='9'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-                <label>Running (1) to Dancing (10)</label>
-            </div>
-            <div class="input-field col s12"><select data-num='10'>
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select><label>Aaaayyy!!! (1) to Geronimo!!!(10)</label> </div>
-            <button class="waves-effect waves-light btn blue" type="submit">Find a Friend!</button>
-        </form>
+            </form>
+
+        </div>
     </div>
 
-    <div id="recommendedFriend" class="modal"> <div id="friendName"></div> <img id="friendImage" class="materialboxed" width="650" src="images/sample-1.jpg"></div>
+    <div id="recommendedFriend" class="modal">
+        <div class="container">
+            <div class="row bold">
+                <h3>Best Match</h3>
+            </div>
+            <div class="divider"></div>
+            <div id="friendName"></div>
+            <img id="friendImage" class="materialboxed s6" width="650" src="images/sample-1.jpg" alt="friendImage">
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <footer class="page-footer white">
+        <div class="footer-copyright white" style="color: black">
+            <div class="container">
+                <a href="/api/friends">API Friends List</a> | <a
+                    href="https://github.com/JacobBraxley/friendfinder">GitHub Repo</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript">
+    <script>
 
         $("#newProfileSurvey").on("submit", function (event) {
             event.preventDefault();
@@ -190,10 +237,10 @@
                     //Take all the selects.   Sort them by data-id (just in case).                             Use map to Convert them from DOM to just the selected value.
                     scores: $.map($('select').sort((a, b) => { return $(a).data('num') - $(b).data('num'); }), x => x.value)
                 }
-                $.post("/api/friends", newProfile, function(data) {
+                $.post("/api/friends", newProfile, function (data) {
                     //Open the modal with the new friend data which should be found in friends.js
-                    $('#friendName').html(`<h1>${data.name}</h1>`);
-                    $('#friendImage').attr("src",data.photo);
+                    $('#friendName').html(`<h5>${data.name}</h5>`);
+                    $('#friendImage').attr("src", data.photo);
                     M.Modal.getInstance($('#recommendedFriend')).open();
                 });
             }
